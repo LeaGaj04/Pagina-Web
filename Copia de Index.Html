@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="Style.Css">
+  <title>GoodGuy.</title>
+</head>
+
+<body>
+  <!-- ========================================================== -->
+  <!--  encabezado -->
+  <!-- ========================================================== -->
+
+  <header class="container-fluid bg-success d-flex justify-content-center ">
+    <p class="text-light mb-0 p-2 fs-6">Contacto (+56-9)-7777-22233</p>
+  </header>
+
+  <!-- ========================================================== -->
+  <!--  menu -->
+  <!-- ========================================================== -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 " id="menu">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <span class="text-success fs-5 fw-bold"> GoodGuy. </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.Html">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#Informacion">Informacion</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#Ventas">Ventas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Equipo">Equipo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Ubicacion">Ubicacion</a>
+          </li>
+        </ul>
+        <div>
+          <ul>
+            <li class="submenu">
+              <img src="img/carrito_1.png" id="img-carrito" alt="" width="30" height="30">
+              <div id="carrito">
+                <table id="lista-carrito">
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th>Precio<th>
+                        <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <a href="#" id="vaciar-carrito" class="btn-2"> Vaciar Carrito</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================== -->
+  <!--  carrusel -->
+  <!-- ========================================================== -->
+
+  <div id="carouselCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="img/canva_1.png" class="d-block w-100" alt="img1">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="img/canva_2.png" class="d-block w-100" alt="img2">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="img/canva_3.png" class="d-block w-100" alt="img3">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="img/canva_4.png" class="d-block w-100" alt="img4">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+
+  <!-- ========================================================== -->
+  <!--  Inicio De Sesion -->
+  <!-- ========================================================== -->
+
+  <br>
+  <section>
+    <div>
+      <div class="row g-0 bg-body-secondary position-relative">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="img/canva_0.png" class="w-100" alt="...">
+        </div>
+        <div class="col-md-6 p-4 ps-md-0">
+          <h5 class="mt-0">APROVECHA TODAS NUESTRAS OFERTAS SEMANALES</h5>
+          <p> Registrate con tu correo y obtendras un descuento del 50% de descuento en la marca seleccionada de la semana</p>
+          <div>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">*Nombre</label>
+                <input type="email" class="form-control" id="inputNombre" placeholder="Maria">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">*Apellido</label>
+                <input type="password" class="form-control" id="inputApellido" placeholder="Carrasco">
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">*Rut</label>
+                <input type="email" class="form-control" id="inputRut" placeholder="1.222.333-4">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">*Telefono</label>
+                <input type="password" class="form-control" id="inputTelefono" placeholder="1 2222 3333">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">*Correo</label>
+                <input type="text" class="form-control" id="inputCorreo" placeholder="Ejemplo@email.com">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">*Contraseña</label>
+                <input type="text" class="form-control" id="inputContraseña" placeholder="********">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <button class="btn btn-success focus-ring  text-decoration-none border rounded-2" style="--bs-focus-ring-color: rgba(var(--bs-success-rgb), .25)" " type="button">Registrarse</button>
+                  <!-- decoracion del booton en la clase -->
+                </div>
+
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- ========================================================== -->
+  <!--  Informacion -->
+  <!-- ========================================================== -->
+
+  <section class=" text-center mx-auto pt-4 w-50 border-top border-3 " id="Informacion">
+    <br>
+    <h1 class=" text-success fs-2 "> Informacion</h1>
+    <p> Pequeñas ventas para ayudar a tu fundacion</p>
+    <div class=" row justify-content-center text-center" >
+      <ul>
+        <ul>Misión y Objetivos: <p>
+          "Nuestra misión en la ayuda a esta fundacion 'GoodGuy.' es vender todo lo posible para asi facilitar los rescates, 
+          rehabilitaciones y encontrar hogares amorosos para perros en situación de abandono, 
+          maltrato o riesgo de sacrificio. ellos estan compremetidos a brindarles los cuidados médicos, 
+          el amor y la atención que merecen, mientras educamos a la comunidad sobre la importancia de la adopción responsable y el bienestar animal."
+        </p> </ul>
+        <ul>Cómo Apoyar: <p>
+          "Para poder apoyar a esta causa o Fundacion hay diferentes formas Como las que te mencionare,
+          ser voluntario para algun rescate cercano a ti e informado a nuesto contacto,
+          si necesitas algun articulo como collar o bandanas confia en nuestros productos,
+          lo recaudado sera enviado directamente a la fundacion"
+        </p> </ul>
+      </ul>
+    </div>
+    <p class="p-3 fs-4">
+      <span class="text-success">GoodGuy.
+      </span>
+    </p>
+    <p>Una fundacion sin fines de lucro elaborada por un pequeño grupo de animalistas con grandes aspiraciones</p>
+  </section>
+  <br>
+
+  <!-- ========================================================== -->
+  <!--  Ventas -->
+  <!-- ========================================================== -->
+
+  <section id="Ventas">
+    <div class="w-50 m-auto text-center border-top border-3 pt-4"></div>
+    <br>
+    <div>
+      <h1 class=" d-flex justify-content-center text-success"> Ventas</h1>
+      <div class="container mb-5 mt-3 " id="">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card " style="width: 18rem;">
+              <img src="img/b_azul.avif  " class="card-img-top" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title">Bandana Color Azul</h5>
+                <p class="Precio card-text">Precio: $5.990</p>
+                <a href="#" class=" btn-2 btn-success">Añadir al carrito</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card" style="width: 18rem;">
+              <img src="img/b_roja.avif" class="card-img-top" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title">Bandana Color Rojo</h5>
+                <p class="Precio card-text">Precio: $5.990</p>
+                <a href="#" class=" btn-2 btn-success">Añadir al carrito</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card" style="width: 18rem;">
+              <img src="img/b_rosa.avif" class="card-img-top" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title">Bandana Color Rosa</h5>
+                <p class="Precio card-text">Precio: $5.990</p>
+                <a href="#" class=" btn-2 btn-success">Añadir al carrito</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card" style="width: 18rem;">
+              <img src="img/c_azul.webp" class="card-img-top" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title">Collar Color Azul</h5>
+                <p class="Precio card-text">Precio: $7.990</p>
+                <a href="#" class=" btn-2 btn-success">Añadir al carrito</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card" style="width: 18rem;">
+              <img src="img/c_roja.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Collar Color Rojo</h5>
+                <p class="Precio card-text">Precio: $7.990</p>
+                <a href="#" class=" btn-2 btn-success">Añadir al carrito</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="card" style="width: 18rem;">
+              <img src="img/c_rosa.webp" class="card-img-top" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title">Collar Color Rosa</h5>
+                <p class="Precio card-text">Precio: $7.990</p>
+                <a href="#" class=" btn-2 btn-success">Añadir al carrito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ============================================================================= -->
+  <!--                                             Ventas 2                          -->
+  <!-- ============================================================================== -->
+
+
+  <main class="products container" id="lista-1">
+
+    <h2> Productos de la Semana</h2>
+
+    <div class="product-content">
+
+      <div class="product">
+        <img src="img/producto_1.avif" alt="">
+        <div class="product-txt">
+          <h3>producto</h3>
+          <p class="Precio">$22.990</p>
+          <a href="#" class="agregar-carrito btn-2" data-id="1" > Agregar </a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="img/producto_2.avif" alt="">
+        <div class="product-txt">
+          <h3>producto</h3>
+          <p class="Precio">$22.990</p>
+          <a href="#" class="agregar-carrito btn-2" data-id="2" > Agregar </a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="img/producto_3.avif" alt="">
+        <div class="product-txt">
+          <h3>producto</h3>
+          <p class="Precio">$22.990</p>
+          <a href="#" class="agregar-carrito btn-2" data-id="3" > Agregar </a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="img/producto_4.avif" alt="">
+        <div class="product-txt">
+          <h3>producto</h3>
+          <p class="Precio">$22.990</p>
+          <a href="#" class="agregar-carrito btn-2" data-id="4" > Agregar </a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="img/producto_5.png" alt="">
+        <div class="product-txt">
+          <h3>producto</h3>
+          <p class="Precio">$22.990</p>
+          <a href="#" class="agregar-carrito btn-2" data-id="5" > Agregar </a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="img/producto_6.avif" alt="">
+        <div class="product-txt">
+          <h3>producto</h3>
+          <p class="Precio">$22.990</p>
+          <a href="#" class="agregar-carrito btn-2" data-id="6" > Agregar </a>
+        </div>
+      </div>
+
+    </div>
+
+
+  </main>
+
+
+  <!-- ========================================================== -->
+  <!--  Integrandes Caninos -->
+  <!-- ========================================================== -->
+
+
+
+  <section class="container-fluid">
+    <div class="w-50 m-auto text-center border-top border-3">
+      <br>
+      <h1 class=" text-success d-flex justify-content-center  " id=""> Integrantes caninos </h1>
+    </div>
+    <div class="row w-75 mx-auto servicio-fila">
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+        <img class="border border-4 rounded" src="img/sasha_1.webp" alt="pizza" width="700" height="180">
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Sasha</h3>
+          <p class="px-4">
+            Un día, mientras buscaba comida entre los desechos cerca de un mercado, 
+            Sasha fue descubierta por una joven llamada Ana la cual se contacto con la fundacion</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+        <img class="border border-4 rounded" src="img/toddy_2.jpeg" alt="pizza" width="180" height="180">
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Toddy</h3>
+          <p class="px-4">
+            Una joven llamada Carla lo encontró mientras paseaba por el vecindario 
+          y de inmediato se sintió conmovida por la situación de Toddy. Sin pensarlo lo llevo a la fundacion para que recibiera un hogar
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row w-75 mx-auto servicio-fila">
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+        <img class="border border-4 rounded" src="img/perro_3.jpeg" alt="pizza" width="180" height="160">
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Rey</h3>
+          <p class="px-4">La historia de Rey es un testimonio del poder transformador del amor y la adopción.
+             A través del cuidado y la atención de una familia cariñosa,
+             Rey pasó de ser un perrito callejero a ser el rey indiscutible de la fundacion.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+        <img class="border border-4 rounded" src="img/perro_4.jpeg" alt="pizza" width="180" height="160">
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Negra</h3>
+          <p class="px-4">
+            Gracias al corazón bondadoso de Sofía, 
+            Negra pasó de ser una perrita callejera a ser una parte importante 
+            de la fundacion </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================== -->
+  <!--  Equipo -->
+  <!-- ========================================================== -->
+
+
+  <section>
+    <div class=" w-50 m-auto text-center border-top border-3" id="Equipo">
+      <br>
+      <h1 class=" fs-2 mt-3 text-success"> Un Equipo Pequeño</h1>
+      <span class="mb-3  "> "Con Grandes Aspiraciones"</span>
+        <p>
+          Inicialmente, el grupo comenzó con pequeñas acciones, como alimentar a los perros callejeros y
+          buscar hogares temporales para aquellos que estaban en peores condiciones.
+          Con el tiempo, su pasión y compromiso por la causa crecieron,
+          y decidieron formalizar su esfuerzo creando una organización sin fines de lucro.
+        </p>
+    </div>
+    <div class="mt-5 text-center">
+      <img class="img-fluid mb-5 border border-4 rounded-circle" " src="img/foto_t1.jpeg" alt="equipo" width="300" height="300">
+    </div>
+
+    <div id="local" class="border-top border-2">
+      <div class="mapa"></div>
+      
+      <div>
+        <div class="wrapper" id="Ubicacion">
+          <h2>Ubicados en Pirque Baldomero Lillo 6262. </h2>
+
+          <!-- funcion nueva P.2 -->
+
+          <h2 class="text-success mb-4"
+          id="typewriter"></h2>
+
+          <p class="fs-5 text-body"> esta ubicacion fue elegida por comodidad de la fundacion y su grupo de animalitos
+            ya que el clima es bastante agradable para ellos y asi favoreser a su desarrollo</p>
+          <section class="d-flex" id="numeros-local">
+            <div>
+              <p class="text-success fs-5">248</p>
+              <p>Dias de sol</p>
+            </div>
+            <div>
+              <p class="text-success fs-5">80%</p>
+              <p>Soleado</p>
+            </div>
+            <div>
+              <p class="text-success fs-5">21/25 grados</p>
+              <p>Temperatura</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--------------- pie de pagina ------------------->
+
+  <section>
+    <footer class="footer bg-success py-5">
+      <div class="container">
+          <div class="row">
+              <h4 class="text-center text-light">Redes Sociales</h4>
+              <div class="col-md-6 text-center">
+                  <a href="#" class="text-light " id="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg> Instagram </a>
+                  <p class="text-light mt-1">Ingresa a nuestro instagram para que estes al tanto de todo</p>
+              </div>
+              <div class="col-md-6 text-center">
+                  <a href="" class="text-light" id="Whatsapp"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                  </svg> Whatsapp</a>
+                  <p class="text-light mt-1">Si necesitas atencion de inmediato o tiene una duda ve a nuestro Whatsapp</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

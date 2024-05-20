@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+/*------- body --------*/
+
+body {
+    font-family: "Poetsen One", sans-serif;
+    overflow-x: hidden;
+}
+
+/*--------- menu -------*/
+
+#menu li > a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
+
+
+}
+
+#menu form > button {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* carrito */
+
+.submenu{
+    position:relative;
+}
+.submenu #carrito{
+    display: none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4E4B5076 ;
+    padding: 20px;
+    min-width: 400px;
+}
+table{
+    width: 100%;
+}
+th, td{
+    color: #FFFFFF;
+}
+.borrar{
+    background-color: #8dc817;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.products{
+    padding: 0 0 100px 0;
+    text-align: center;
+
+}
+.products h2{
+    font-size: 40px;
+    color: #181713;
+    text-transform: capitalize;
+    margin-bottom: 55px;
+
+}
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.product{
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) ;
+    padding: 35px;
+
+}
+.product img{
+    width: 150px;
+    height: 130px;
+    margin-bottom: 10px;
+
+}
+.product h3{
+    color: #8dc817;
+}
+.product p{
+    font-size: 15px;
+    margin: 0;
+    color: #181713;
+    font-weight: 600;
+}
+
+
+/*--------- btn  -------*/
+
+.btn-2 {
+    display: inline-block ;
+    margin-top: 15px;
+    padding: 7px 25px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #8dc817;
+    text-decoration: none;
+
+}
+
+
+/*--------- imagenes-carrusel -------*/
+
+.carousel-inner{
+    max-height: 39rem;
+
+}
+
+/*--------- mapa -------*/
+
+.mapa{
+    background:url(../E5/img/mapa_1.jpeg) ;
+    width: 80%;
+    height: 320px;
+    margin-top: 5%;
+}
+
+#local{
+    background-color: #f3f3f3;
+    padding-bottom: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 50%;
+    margin-left: 100px;
+    padding-top: 80px;
+    
+}
+
+/*--------- Equipo -------*/
+
+#numeros-local div {
+    padding: 0 20px 0 0;
+    height: 48px;
+
+}
+
+#numeros-local div:not(:last-child){
+    border-right: 2px solid #3f3f3f;
+
+}
+
+#numeros-local div:not(:first-child){
+    padding-left:  20px ;
+
+}
+
+#numeros-local p{
+    margin: 0;
+
+}
+
+
+/*--------- pie de pagina -------*/
+
+
+#Instagram {
+    text-decoration: none;
+}
+
+#Whatsapp {
+    text-decoration: none;
+}
+
+
+
+
+/*--------- large  -------*/
+
+@media (max-width: 1200px){
+    #local {
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+    .wrapper{
+        width: 90%;
+        margin: auto;
+        padding-top: 50px;
+    }
+}
+
+
+
+/*--------- media  -------*/
+
+@media (max-width:768px){
+    #intro, #equipo {
+        width: 90%;    
+    }
+
+    #equipo p{
+        display: none;
+    }
+
+    .servicio-fila{
+        width: 100%;
+        text-align: center;
+    }
+    .submenu:hover #carrito{
+        min-width: 340px;
+    }
+    .products{
+        padding: 30px;
+
+    }
+    .product-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+/*--------- small  -------*/
+
+@media(max-width: 576px){
+    .icono-wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+}

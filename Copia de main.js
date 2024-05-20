@@ -12,7 +12,7 @@ typewriter
 .pauseFor(200)
 .start();
 
-//segunda funcion
+//segunda funcion 
 
 
 

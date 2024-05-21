@@ -16,7 +16,6 @@ typewriter
 
 var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 
-
 $(document).ready(function(){
     $("#Formulario").submit(function(event){
         event.preventDefault();
@@ -57,14 +56,7 @@ $(document).ready(function(){
     });
 });
 
-
-
-
-
-
-
-
-//carrito sin uso por ahora
+//carrito no termina de funcionar
 
 const carrito = document.getElementById('carrito');
 const elementos1 = document.getElementById('lista-1');
@@ -138,5 +130,13 @@ function vaciarCarrito() {
     return false;
 }
 
+//carrito no termina de funcionar
 
+function mostrarNotificacion() {
+    var toast = document.getElementById('Oreja');
+    var bsToast = new bootstrap.Toast(toast);
+    bsToast.show();
+}
 
+//Intervalo entre notificaciones
+setInterval(mostrarNotificacion, 7000);

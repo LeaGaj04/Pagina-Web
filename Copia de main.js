@@ -20,11 +20,11 @@ $(document).ready(function(){
     $("#Formulario").submit(function(event){
         event.preventDefault();
 
-        var nombre = $("inputNombre").val();
-        var apellido = $("inputApellido").val();
-        var telefono = $("inputTelefono").val();
-        var correo = $("inputCorreo").val();
-        var contraseña = $("inputContraseña").val();
+        var nombre = $("#inputNombre").val();
+        var apellido = $("#inputApellido").val();
+        var telefono = $("#inputTelefono").val();
+        var correo = $("#inputCorreo").val();
+        var contraseña = $("#inputContraseña").val();
 
         if(nombre.length < 3 || nombre.length > 20){
             alert("El nombre debe tener entre 2 y 20 caracteres.");
@@ -57,78 +57,71 @@ $(document).ready(function(){
 });
 
 //carrito no termina de funcionar
+document.addEventListener('DOMContentLoaded', () => {
+    const carrito = document.getElementById('carrito');
+    const elementos1 = document.getElementById('lista-1');
+    const lista = document.querySelector("#lista-carrito");
+    const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
-const carrito = document.getElementById('carrito');
-const elementos1 = document.getElementById('lista-1');
-const lista = document.querySelector("#lista-carrito tbody");
-const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+    cargarEventListeners();
 
-cargarEventListeners();
+    function cargarEventListeners() {
+        // Disparar cuando se agrega un producto al carrito
+        elementos1.addEventListener('click', comprarElemento);
 
-function cargarEventListeners() {
-    elementos1.addEventListener('click', comprarElemento);
-    carrito.addEventListener('click', eliminarElemento);
-    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+        // Disparar cuando se elimina un producto del carrito
+        carrito.addEventListener('click', eliminarElemento);
 
-}
-
-function comprarElemento(e) {
-    e.preventDefault();
-    if (e.target.classList.contains('agregar-carrito')){
-        const elemento = e.target.parentElement.parentElement;
-        leerDatosElemento(elemento);
+        // Disparar cuando se vacía el carrito
+        vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
     }
-}
 
-function leerDatosElemento(elemento) {
-    const infoElemento = {
-        imagen: elemento.querySelector('img').src,
-        titulo: elemento.querySelector('h3').textContent,
-        precio: elemento.querySelector('.precio').textContent,
-        id: elemento.querySelector('a').getAttribute('data-id')
+    function comprarElemento(e) {
+        e.preventDefault();
+        if (e.target.classList.contains('agregar-carrito')) {
+            const elemento = e.target.closest('.producto');
+            leerDatosElemento(elemento);
+        }
     }
-    insertarCarrito(infoElemento);
-}
 
-function insertarCarrito(elemento) {
-    const row = document.createElement('tr');
-    row.innerHTML = `
-    <td>
-    <img src="${elemento.imagen}" width=100 >
-    </td>
-    <td>
-        ${elemento.titulo}
-    </td>
-    <td>
-        ${elemento.precio}
-    </td>
-    <td>
-        <a herf="#" class="borrar" data-id="${elemento.id}"> X </a>
-    </td>
-    `;
-    lista.appendChild(row);
-}
-
-
-function eliminarElemento(e) {
-    e.preventDefault();
-    let elemento,
-        elementoId;
-    if (e.target.classList.contains('borrar')) {
-        e.target.parentElement.parentElement.remove();
-        elemento = e.target.parentElement.parentElement;
-        elementoId = elemento.querySelector('a').getAttribute('data-id');
-
+    function leerDatosElemento(elemento) {
+        const infoElemento = {
+            imagen: elemento.querySelector('img').src,
+            titulo: elemento.querySelector('h3').textContent,
+            precio: elemento.querySelector('.precio').textContent,
+            id: elemento.querySelector('a').getAttribute('data-id')
+        };
+        insertarCarrito(infoElemento);
     }
-}
 
-function vaciarCarrito() {
-    while(lista.firstChild) {
-        lista.removeChild(lista.firstChild);
-
+    function insertarCarrito(elemento) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+        <td>
+            <img src="${elemento.imagen}" width="100">
+        </td>
+        <td>${elemento.titulo}</td>
+        <td>${elemento.precio}</td>
+        <td>
+            <a href="#" class="borrar" data-id="${elemento.id}">X</a>
+        </td>
+        `;
+        lista.appendChild(row);
     }
-    return false;
-}
+
+    function eliminarElemento(e) {
+        e.preventDefault();
+        if (e.target.classList.contains('borrar')) {
+            e.target.closest('tr').remove();
+        }
+    }
+
+    function vaciarCarrito() {
+        while (lista.firstChild) {
+            lista.removeChild(lista.firstChild);
+        }
+    }
+});
 
 //carrito no termina de funcionar
 

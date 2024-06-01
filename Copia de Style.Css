@@ -108,7 +108,19 @@ th, td{
 
 }
 
-/*--------- imagenes-carrusel -------*/
+/*--------- carrusel-ventas 2 -------*/
+
+.custom-carousel {
+    max-width: 100%; /* Ajusta el porcentaje según tus necesidades */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+}
+.custom-carousel .carousel-item {
+    height: 200px; /* Ajusta la altura según tus necesidades */
+}
+.custom-carousel .carousel-item img {
+    height: 80%; /* Hace que las imágenes llenen el contenedor */
+    object-fit: 100%; /* Ajusta la imagen para que cubra el contenedor */
+}
 
 /*--------- mapa -------*/
 
@@ -191,7 +203,7 @@ th, td{
 
 @media (max-width:768px){
     #intro, #equipo {
-        width: 90%;    
+        width: 90%;
     }
 
     #equipo p{

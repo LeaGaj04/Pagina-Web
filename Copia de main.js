@@ -56,72 +56,61 @@ $(document).ready(function(){
     });
 });
 
+
+
+
 //carrito no termina de funcionar
-document.addEventListener('DOMContentLoaded', () => {
-    const carrito = document.getElementById('carrito');
-    const elementos1 = document.getElementById('lista-1');
-    const lista = document.querySelector("#lista-carrito");
-    const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+document.addEventListener('DOMContentLoaded', function() {
+      let cart = [];
+      const cartItemsContainer = document.getElementById('cart-items');
+      const cartCount = document.getElementById('cart-count');
 
-    cargarEventListeners();
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+          const name = this.getAttribute('data-name');
+          const price = this.getAttribute('data-price');
+          const image = this.getAttribute('data-image');
 
-    function cargarEventListeners() {
-        // Disparar cuando se agrega un producto al carrito
-        elementos1.addEventListener('click', comprarElemento);
+          cart.push({ name, price, image });
+          updateCart();
+        });
+      });
 
-        // Disparar cuando se elimina un producto del carrito
-        carrito.addEventListener('click', eliminarElemento);
+      function updateCart() {
+        cartItemsContainer.innerHTML = '';
+        cart.forEach((item, index) => {
+          const listItem = document.createElement('li');
+          listItem.classList.add('list-group-item');
+          listItem.innerHTML = `
+            <div class="d-flex justify-content-between align-items-center">
+              <img src="${item.image}" alt="${item.name}" width="50" class="me-2">
+              <span>${item.name}</span>
+              <span class="badge bg-primary rounded-pill">$${item.price}</span>
+              <button class="btn btn-danger btn-sm ms-2 remove-from-cart" data-index="${index}">Eliminar</button>
+            </div>
+          `;
+          cartItemsContainer.appendChild(listItem);
+        });
 
-        // Disparar cuando se vacía el carrito
-        vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
-    }
-
-    function comprarElemento(e) {
-        e.preventDefault();
-        if (e.target.classList.contains('agregar-carrito')) {
-            const elemento = e.target.closest('.producto');
-            leerDatosElemento(elemento);
+        if (cart.length === 0) {
+          cartItemsContainer.innerHTML = '<li class="list-group-item">Tu carrito está vacío.</li>';
         }
-    }
 
-    function leerDatosElemento(elemento) {
-        const infoElemento = {
-            imagen: elemento.querySelector('img').src,
-            titulo: elemento.querySelector('h3').textContent,
-            precio: elemento.querySelector('.precio').textContent,
-            id: elemento.querySelector('a').getAttribute('data-id')
-        };
-        insertarCarrito(infoElemento);
-    }
+        cartCount.innerText = cart.length;
 
-    function insertarCarrito(elemento) {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-        <td>
-            <img src="${elemento.imagen}" width="100">
-        </td>
-        <td>${elemento.titulo}</td>
-        <td>${elemento.precio}</td>
-        <td>
-            <a href="#" class="borrar" data-id="${elemento.id}">X</a>
-        </td>
-        `;
-        lista.appendChild(row);
-    }
+        document.querySelectorAll('.remove-from-cart').forEach(button => {
+          button.addEventListener('click', function() {
+            const index = this.getAttribute('data-index');
+            cart.splice(index, 1);
+            updateCart();
+          });
+        });
+      }
+    });
 
-    function eliminarElemento(e) {
-        e.preventDefault();
-        if (e.target.classList.contains('borrar')) {
-            e.target.closest('tr').remove();
-        }
-    }
 
-    function vaciarCarrito() {
-        while (lista.firstChild) {
-            lista.removeChild(lista.firstChild);
-        }
-    }
-});
+
+
 
 //carrito no termina de funcionar
 
